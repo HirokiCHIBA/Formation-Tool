@@ -1,0 +1,117 @@
+﻿@charset "UTF-8";
+@import "bootstrap/less/bootstrap.less";
+
+body {
+	-webkit-user-select:none;
+	 -khtml-user-select:none;
+	   -moz-user-select:none;
+	    -ms-user-select:none;
+	     -o-user-select:none;
+	        user-select:none;
+	-webkit-user-drag:none;
+	 -khtml-user-drag:none;
+}
+
+svg {
+	vertical-align: bottom;
+}
+
+#pool {
+	-webkit-transition: -webkit-transform .25s;
+	   -moz-transition: -moz-transform .25s;
+	    -ms-transition: -ms-tra1nsform .25s;
+	     -o-transition: -o-transform .25s;
+	        transition: transform .25s;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+#pool.preview {
+	-webkit-transfor: perspective(100) rotateX(30deg) scale(0.7, 0.25);
+	   -moz-transform: perspective(100) rotateX(30deg) scale(0.7, 0.25);
+	    -ms-transform: perspective(100) rotateX(30deg) scale(0.7, 0.25);
+	     -o-transform: perspective(100) rotateX(30deg) scale(0.7, 0.25);
+	        transform: perspective(100) rotateX(30deg) scale(0.7, 0.25);
+}
+
+#reset_zoom {
+	display: block;
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+
+#open_editor {
+	display: block;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+
+#close_editor {
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 70px;
+}
+
+#actor_control {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+#actor_control {
+	display: block;
+	overflow: hidden;
+
+	a {
+		display: block;
+		float: left;
+		font-size: xx-large;
+		text-decoration: none;
+	}
+
+	a + a {
+		margin-left: 5px;
+	}
+
+	a, a:link, a:visited {
+		color: @gray;
+	}
+
+	a:hover, a:active {
+		color: darken(@gray, 15%);
+	}
+
+	.panel {
+		margin-bottom: 0;
+		border-bottom: none;
+		.border-bottom-radius(0)
+	}
+}
+
+#actor_setting {
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: scroll;
+	.form-group, .form-control {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		width:  100%;
+	}
+}
+
+.clear-hpadding() {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#svg_screen {
+	.clear-hpadding;
+}
